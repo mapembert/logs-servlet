@@ -21,12 +21,12 @@ Before setting up this project, ensure you have the following installed:
    ```bash
    git clone https://github.com/mapembert/logs-servlet.git
    ```
-
+---
 2. Navigate to the Project Directory
     ```bash
     cd logs-servlet
     ```
-
+---
 3. Build the Project
     Ensure you are in the project root directory and build the project using Maven:
     ```bash
@@ -34,14 +34,18 @@ Before setting up this project, ensure you have the following installed:
     ```
     This will generate a logs-servlet.war file in the target directory.
 
+---
 4. Deploy the Servlet
 
     Copy the logs-servlet.war file to a WebSphere Liberty deployment directory. The following was chosen in this example /opt/IBM/tririga/ (adjust based on your configuration).
 
-    ```bash
-    cp target/logs-servlet.war /opt/IBM/tririga/
-    ```
+    **First move the war file into the vagrant directory!**
 
+    ```bash
+    cd /vagrant
+    cp logs-servlet.war /opt/IBM/tririga/
+    ```
+---
 5. Edit the WebSphere Liberty server.xml file.
 
     Add the following configuration to the server.xml file in the WebSphere Liberty server directory:
@@ -50,12 +54,12 @@ Before setting up this project, ensure you have the following installed:
     <server description="IBM TRIRIGA Application Platform">
     ...
 
-        <application id="logs-servlet" location="/opt/IBM/tririga/logs-servlet.war" contextRoot="/logs"/>
+        <application location="/opt/IBM/tririga/logs-servlet.war" contextRoot="/logs"/>
     ...
     </server>
     ```
     Restart the WebSphere Liberty server to deploy the servlet.
-
+---
 6. Access the Servlet
 
     After deployment, access the servlet in your web browser using the URL:
