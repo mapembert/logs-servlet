@@ -95,3 +95,41 @@ logs-servlet/
 ├── README.md
 └── folder-structure.txt
 ```
+
+
+## Furthermore
+
+Create a new folder and symboli links for the servlet to use as a log directory.
+
+### Create the new symbolic link directories
+
+```bash
+cd /srv
+sudo mkdir logs-servlet
+cd logs-servlet
+sudo ln -s /opt/IBM/tririga/log application
+sudo ln -s /opt/IBM/tririga/log process         # This is a test log directory for the process server, idealy it would be another server
+```
+
+### Change the owner of the new log directory
+
+```bash
+sudo ln -s /opt/IBM/tririga/log process
+sudo ln -s /opt/IBM/tririga/log application
+sudo chown -R websphere:middleware /srv/logs-servlet
+```
+
+### Access the servlet
+
+Try these URLS out in your browser:
+
+
+http://localhost:9080/logs-servlet/logs
+http://localhost:9080/logs-servlet/logs?folder=application
+http://localhost:9080/logs-servlet/logs?folder=application&log=server.log
+http://localhost:9080/logs-servlet/logs?folder=application&log=security.log
+
+http://localhost:9080/logs-servlet/logs?folder=process
+http://localhost:9080/logs-servlet/logs?folder=process&log=server.log
+http://localhost:9080/logs-servlet/logs?folder=process&log=security.log
+
