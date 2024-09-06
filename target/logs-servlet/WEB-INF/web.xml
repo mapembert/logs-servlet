@@ -7,13 +7,13 @@
 
     <!-- Define the servlet -->
     <servlet>
-        <servlet-name>LogServlet</servlet-name>
-        <servlet-class>com.serco.logs.LogServlet</servlet-class>
+        <servlet-name>LogsServlet</servlet-name>
+        <servlet-class>com.serco.logs.LogsServlet</servlet-class>
     </servlet>
 
     <!-- Define the servlet mapping -->
     <servlet-mapping>
-        <servlet-name>LogServlet</servlet-name>
+        <servlet-name>LogsServlet</servlet-name>
         <url-pattern>/logs</url-pattern>
     </servlet-mapping>
 

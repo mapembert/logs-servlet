@@ -40,7 +40,6 @@ Before setting up this project, ensure you have the following installed:
 
     ```bash
     cp target/logs-servlet.war /opt/IBM/tririga/
-    Restart the WebSphere Liberty server to deploy the servlet.
     ```
 
 5. Edit the WebSphere Liberty server.xml file.
@@ -55,6 +54,7 @@ Before setting up this project, ensure you have the following installed:
     ...
     </server>
     ```
+    Restart the WebSphere Liberty server to deploy the servlet.
 
 6. Access the Servlet
 
