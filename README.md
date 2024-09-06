@@ -65,3 +65,27 @@ Before setting up this project, ensure you have the following installed:
     ```
 
     You should see the message: "Hello, this is the LogsServlet."
+
+### Project Structure
+```bash
+logs-servlet/
+│
+├── src/
+│   ├── main/
+│   │   ├── java/
+│   │   │   └── com/
+│   │   │       └── serco/
+│   │   │           └── logs/
+│   │   │               └── LogsServlet.java
+│   │   ├── resources/
+│   │   └── webapp/
+│   │       ├── index.jsp
+│   │       └── WEB-INF/
+│   │           └── web.xml
+│   ├── target/
+│   │   └── logs-servlet.war
+│   └── pom.xml
+│
+├── README.md
+└── folder-structure.txt
+```
