@@ -17,27 +17,21 @@ Before setting up this project, ensure you have the following installed:
 ### Local Setup
 
 1. **Clone the Repository**
-
    Clone the repository from GitHub to your local machine:
-
    ```bash
    git clone https://github.com/mapembert/logs-servlet.git
    ```
 
 2. Navigate to the Project Directory
-
     ```bash
     cd logs-servlet
     ```
 
 3. Build the Project
-
     Ensure you are in the project root directory and build the project using Maven:
-
     ```bash
     mvn clean package
     ```
-
     This will generate a logs-servlet.war file in the target directory.
 
 4. Deploy the Servlet
@@ -49,7 +43,20 @@ Before setting up this project, ensure you have the following installed:
     Restart the WebSphere Liberty server to deploy the servlet.
     ```
 
-5. Access the Servlet
+5. Edit the WebSphere Liberty server.xml file.
+
+    Add the following configuration to the server.xml file in the WebSphere Liberty server directory:
+
+    ```xml
+    <server description="IBM TRIRIGA Application Platform">
+    ...
+
+        <application id="logs-servlet" location="/opt/IBM/tririga/logs-servlet.war" contextRoot="/logs"/>
+    ...
+    </server>
+    ```
+
+6. Access the Servlet
 
     After deployment, access the servlet in your web browser using the URL:
 
