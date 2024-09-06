@@ -125,11 +125,16 @@ Try these URLS out in your browser:
 
 
 http://localhost:9080/logs-servlet/logs
+
 http://localhost:9080/logs-servlet/logs?folder=application
+
 http://localhost:9080/logs-servlet/logs?folder=application&log=server.log
+
 http://localhost:9080/logs-servlet/logs?folder=application&log=security.log
 
 http://localhost:9080/logs-servlet/logs?folder=process
+
 http://localhost:9080/logs-servlet/logs?folder=process&log=server.log
+
 http://localhost:9080/logs-servlet/logs?folder=process&log=security.log
 
