@@ -65,7 +65,9 @@ Before setting up this project, ensure you have the following installed:
     After deployment, access the servlet in your web browser using the URL:
 
     ```bash
-    http://localhost:9080/logs
+    http://localhost:9080/logs-servlet/     # This is the default context root
+
+    http://localhost:9080/logs-servlet/logs # This is the context root specified in the server.xml file
     ```
 
     You should see the message: "Hello, this is the LogsServlet."
